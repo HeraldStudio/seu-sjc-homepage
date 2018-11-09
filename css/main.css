@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Noble Scarlet, PingFang SC, Noto Sans CJK SC, Source Han Sans CN, Microsoft YaHei UI, sans-serif;
+}
+
+.clear{
+  width:100%;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  clear:both;
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+#head{
+  background-color:#333;
+  width: 100%;
+}
+
+#head-content{
+  background-color:#333;
+  width: 1200px;
+  margin: 0 auto;
+  height: 430px;
+}
+
+#head-left{
+  display: table-cell;
+  height: 430px;
+  vertical-align: middle;
+  float: left;
+}
+
+#head-right{
+  display: table-cell;
+  height: 430px;
+  vertical-align: middle;
+  float: right;
+}
+
+#head-logo{
+  width: 512px;
+  height: 160px;
+  margin-left:30px;
+}
+

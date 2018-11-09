@@ -1,0 +1,19 @@
+{
+  "name": "seu-sjc-homepage",
+  "version": "1.0.0",
+  "description": "东南大学审计处主页模板",
+  "main": "main.htm",
+  "scripts": {
+    "package":"zip -r template.zip main.htm displayinfo.htm listcolumn.htm css/ asset/ js/ extends/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeraldStudio/seu-sjc-homepage.git"
+  },
+  "author": "Wolf-Tungsten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeraldStudio/seu-sjc-homepage/issues"
+  },
+  "homepage": "https://github.com/HeraldStudio/seu-sjc-homepage#readme"
+}
