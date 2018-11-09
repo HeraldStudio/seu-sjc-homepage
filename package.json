@@ -4,7 +4,7 @@
   "description": "东南大学审计处主页模板",
   "main": "main.htm",
   "scripts": {
-    "package":"zip -r template.zip main.htm displayinfo.htm listcolumn.htm css/ asset/ js/ extends/"
+    "package":"zip -r herald-template.zip main.htm displayinfo.htm listcolumn.htm style.css images/ css/ assets/ js/ extends/"
   },
   "repository": {
     "type": "git",

@@ -2,29 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>东南大学审计处</title>
-  <link type="text/css" href="css/main.css" rel="stylesheet" />
-  <link type="text/css" href="css/nav.css" rel="stylesheet" />
-  <script src="extends/extends.js"></script>
-  <link href="extends/extends.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>东南大学审计处</title>
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+    <link type="text/css" href="css/nav.css" rel="stylesheet" />
+    <script src="extends/extends.js"></script>
+    <script src="js/vue.js"></script>
+    <link href="extends/extends.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <div id="head">
-        <div id="head-content">
-            <div id="head-left">
-                <img id="head-logo" src="assets/img/logo.png"/>
-            </div>
-            <div id="head-right">
-                <div class="hide" frag="面板1">
-                    <div frag="窗口1">
-                        <div frag="窗口内容"></div>
+        <table id="head-content">
+            <tr>
+                <td>
+                    <img id="head-logo" src="assets/img/logo.png" />
+                </td>
+                <td>
+                    <div class="hide" frag="面板1">
+                        <div id="sjdt-data" frag="窗口1">
+                            <div frag="窗口内容">
+                            </div>
+                            <script language="JavaScript" class="">
+                                var w1imgJsons = [
+                                    {
+                                        "src": "/_images/default/NoPicture.gif",
+                                        "original": "/_images/default/NoPicture.gif",
+                                        "title": "东南大学重点修缮工程项目审计实施细则（试行）",
+                                        "date": "2018-10-23",
+                                        "url": "/_upload/article/files/2e/dd/ead81b3442b48fb18c7be11f44d6/c8b3a199-e67c-4716-b094-8d8ba4b81c7b.doc"
+                                    },
+                                    {
+                                        "src": "/_images/default/NoPicture.gif",
+                                        "original": "/_images/default/NoPicture.gif",
+                                        "title": "关于基建、修缮、装饰工程项目竣工结算及时送审的通知",
+                                        "date": "2018-09-11",
+                                        "url": "/2018/0911/c3782a239855/page.htm"
+                                    },
+                                    {
+                                        "src": "/_images/default/NoPicture.gif",
+                                        "original": "/_images/default/NoPicture.gif",
+                                        "title": "教育部直属高校审计第二协作组工作研讨会在我校召开",
+                                        "date": "2017-10-27",
+                                        "url": "/2017/1029/c3782a201811/page.htm"
+                                    },
+                                    {
+                                        "src": "/_images/default/NoPicture.gif",
+                                        "original": "/_images/default/NoPicture.gif",
+                                        "title": "关于印发《东南大学关于加强建设工程管理审计的实施办法（试行）》的通知",
+                                        "date": "2017-09-05",
+                                        "url": "/_upload/article/files/8c/02/956bf5b240a29299861d6a2289c9/eea3db47-35a5-4729-a034-6e7d9548103d.doc"
+                                    },
+                                    {
+                                        "src": "/_images/default/NoPicture.gif",
+                                        "original": "/_images/default/NoPicture.gif",
+                                        "title": "关于印发《东南大学领导干部经济责任审计实施办法》的通知",
+                                        "date": "2017-08-16",
+                                        "url": "/_upload/article/files/45/3e/d179db904507bf432dc5d4a43897/db56cd66-f655-4bb8-8ba5-023b2a279c80.doc"
+                                    }
+                                ];
+                            </script>   
+                        </div>
                     </div>
-                </div>
-                <div id="sjdt-box"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
+                    <div id="sjdt-box">
+                        <div id="sjdt-head">
+                            <div id="sjdt-head-text">
+                                <span>审计动态</span>
+                            </div>
+                            <a id="sjdt-head-button" href="/sjdt/list.htm">
+                                <span>▶︎</span>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="sjdt-content">
+                            <div v-for="h_item in list">
+                                <div class="date">{{h_item.date}}</div>
+                                <div v-on:click="open(h_item.url)" class="title"> <span>{{h_item.title}}</span> </div> 
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
+
+<script>
+    //document.querySelectorAll('[id="sjdt-data"] script')[0].innerText
+    var sjdtVM = new Vue({
+        el: '#sjdt-box',
+        data: {
+            list: []
+        },
+        methods:{
+            open(url){
+                window.open(url)
+            }
+        },
+        created: function () {
+            eval(document.querySelectorAll('[id="sjdt-data"] script')[0].innerText)
+            for (var i = 0; i < w1imgJsons.length; i++) {
+                w1imgJsons[i].date = w1imgJsons[i].date.split('-')[1] + '-' + w1imgJsons[i].date.split('-')[2]
+                w1imgJsons[i].href = w1imgJsons[i].url
+            }
+            this.list = w1imgJsons
+            console.log(w1imgJsons)
+        }
+    })
+</script>
