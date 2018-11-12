@@ -146,10 +146,10 @@ line-height: 50px;
   min-width: 1000px;
   max-width: 1200px;
   margin: 0 auto;
-  height: 400px;
+  height: 280px;
 }
 .content-box{
-  height: 400px;
+  height: 280px;
   margin-top: 40px;
 }
 .content-head{
@@ -176,4 +176,45 @@ line-height: 50px;
   color: #2F80ED;
   height: 35px;
   line-height: 35px;
+  text-decoration: none;
+}
+
+.content-list{
+  margin-top:10px;
+}
+.content-list-title{
+  cursor:pointer;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+  padding: 5px 0
+}
+
+.content-list-date{
+  cursor:pointer;
+  float: right;
+  font-size: 14px;
+  color: #888888;
+  padding: 5px 0
+}
+
+#link-wrap{
+  width: 100%;
+  background: #f0f0f0;
+}
+
+#link-table{
+  table-layout: fixed;
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#link-table .more-btn{
+  float: none;
+}
+
+#link-table td{
+  text-align: center;
 }
