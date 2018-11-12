@@ -20,48 +20,9 @@
                 </td>
                 <td>
                     <div class="hide" frag="面板1">
-                        <div id="sjdt-data" frag="窗口1">
+                        <div herald-content="审计动态" frag="窗口1">
                             <div frag="窗口内容">
                             </div>
-                            <script language="JavaScript" class="">
-                                var w1imgJsons = [
-                                    {
-                                        "src": "/_images/default/NoPicture.gif",
-                                        "original": "/_images/default/NoPicture.gif",
-                                        "title": "东南大学重点修缮工程项目审计实施细则（试行）",
-                                        "date": "2018-10-23",
-                                        "url": "/_upload/article/files/2e/dd/ead81b3442b48fb18c7be11f44d6/c8b3a199-e67c-4716-b094-8d8ba4b81c7b.doc"
-                                    },
-                                    {
-                                        "src": "/_images/default/NoPicture.gif",
-                                        "original": "/_images/default/NoPicture.gif",
-                                        "title": "关于基建、修缮、装饰工程项目竣工结算及时送审的通知",
-                                        "date": "2018-09-11",
-                                        "url": "/2018/0911/c3782a239855/page.htm"
-                                    },
-                                    {
-                                        "src": "/_images/default/NoPicture.gif",
-                                        "original": "/_images/default/NoPicture.gif",
-                                        "title": "教育部直属高校审计第二协作组工作研讨会在我校召开",
-                                        "date": "2017-10-27",
-                                        "url": "/2017/1029/c3782a201811/page.htm"
-                                    },
-                                    {
-                                        "src": "/_images/default/NoPicture.gif",
-                                        "original": "/_images/default/NoPicture.gif",
-                                        "title": "关于印发《东南大学关于加强建设工程管理审计的实施办法（试行）》的通知",
-                                        "date": "2017-09-05",
-                                        "url": "/_upload/article/files/8c/02/956bf5b240a29299861d6a2289c9/eea3db47-35a5-4729-a034-6e7d9548103d.doc"
-                                    },
-                                    {
-                                        "src": "/_images/default/NoPicture.gif",
-                                        "original": "/_images/default/NoPicture.gif",
-                                        "title": "关于印发《东南大学领导干部经济责任审计实施办法》的通知",
-                                        "date": "2017-08-16",
-                                        "url": "/_upload/article/files/45/3e/d179db904507bf432dc5d4a43897/db56cd66-f655-4bb8-8ba5-023b2a279c80.doc"
-                                    }
-                                ];
-                            </script>   
                         </div>
                     </div>
                     <div id="sjdt-box">
@@ -77,7 +38,7 @@
                         <div id="sjdt-content">
                             <div v-for="h_item in list">
                                 <div class="date">{{h_item.date}}</div>
-                                <div v-on:click="open(h_item.url)" class="title"> <span>{{h_item.title}}</span> </div> 
+                                <div v-on:click="open(h_item.url)" class="title"> <span>{{h_item.title}}</span> </div>
                                 <div class="clear"></div>
                             </div>
                         </div>
@@ -92,34 +53,96 @@
             <div frag="窗口内容"> </div>
         </div>
     </div>
+    <div class="content-wrap">
+        <table border="0" class="content-inner-wrap" style="table-layout:fixed;">
+            <tbody>
+                <tr>
+                    <td>
+                        <div>
+                            <div class="hide" frag="面板3">
+                                <div herald-content="审计公示公告" frag="窗口3">
+                                    <div frag="窗口内容"></div>
+                                </div>
+                            </div>
+                            <div class="content-box" id="sjgsgg-box">
+                                <div style="margin-left:50px; margin-right:24px; height:400px;">
+                                    <div class="content-head">
+                                        <p class="content-title">审计公示公告</p>
+                                        <a class="more-btn">更多>></a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="hide" frag="面板4">
+                                <div herald-content="服务指南" frag="窗口4">
+                                    <div frag="窗口内容"></div>
+                                </div>
+                            </div>
+                            <div class="content-box" id="fwzn-box">
+                                <div style="margin-left:24px; margin-right:24px; height:400px;">
+                                    <div class="content-head">
+                                        <p class="content-title">服务指南</p>
+                                        <a class="more-btn">更多>></a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="hide" frag="面板5">
+                                <div herald-content="下载专区" frag="窗口5">
+                                    <div frag="窗口内容"></div>
+                                </div>
+                            </div>
+                            <div class="content-box" id="xzzq-box">
+                                <div style="margin-left:24px; margin-right:50px; height:400px;">
+                                    <div class="content-head">
+                                        <p class="content-title">下载专区</p>
+                                        <a class="more-btn">更多>></a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    
+
 </body>
 
 <script>
-    //document.querySelectorAll('[id="sjdt-data"] script')[0].innerText
-    var sjdtVM = new Vue({
-        el: '#sjdt-box',
-        data: {
-            list: []
-        },
-        methods:{
-            open(url){
-                window.open(url)
-            }
-        },
-        created: function () {
-            eval(document.querySelectorAll('[id="sjdt-data"] script')[0].innerText)
-            for (var i = 0; i < w1imgJsons.length; i++) {
-                // w1imgJsons[i].year = w1imgJsons[i].date.split('-')[0]
-                // w1imgJsons[i].date = w1imgJsons[i].date.split('-')[1] + '-' + w1imgJsons[i].date.split('-')[2]
-                w1imgJsons[i].href = w1imgJsons[i].url
-                if (w1imgJsons[i].title.length >= 24) {
-                    w1imgJsons[i].title = w1imgJsons[i].title.slice(0, 20) + '...'
+        //document.querySelectorAll('[id="sjdt-data"] script')[0].innerText
+        var sjdtVM = new Vue({
+            el: '#sjdt-box',
+            data: {
+                list: []
+            },
+            methods: {
+                open(url) {
+                    window.open(url)
                 }
+            },
+            created: function () {
+                eval(document.querySelectorAll('[herald-content="审计动态"] script')[0].innerText)
+                for (var i = 0; i < w1imgJsons.length; i++) {
+                    // w1imgJsons[i].year = w1imgJsons[i].date.split('-')[0]
+                    // w1imgJsons[i].date = w1imgJsons[i].date.split('-')[1] + '-' + w1imgJsons[i].date.split('-')[2]
+                    w1imgJsons[i].href = w1imgJsons[i].url
+                    if (w1imgJsons[i].title.length >= 24) {
+                        w1imgJsons[i].title = w1imgJsons[i].title.slice(0, 23) + '...'
+                    }
+                }
+                this.list = w1imgJsons
+                console.log(w1imgJsons)
             }
-            this.list = w1imgJsons
-            console.log(w1imgJsons)
-        }
-    })
-</script>
+        })
+    </script>
