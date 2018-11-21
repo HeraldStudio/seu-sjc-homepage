@@ -1,5 +1,5 @@
 var sjgsggVM = new Vue({
-    el: '#xzzq-box',
+    el: '#zcfg-box',
     data: {
         list: []
     },
@@ -9,7 +9,7 @@ var sjgsggVM = new Vue({
         }
     },
     created: function () {
-        eval(document.querySelectorAll('[herald-content="下载专区"] script')[0].innerText)
+        eval(document.querySelectorAll('[herald-content="政策法规"] script')[0].innerText)
         for (var i = 0; i < w5imgJsons.length; i++) {
             // w1imgJsons[i].year = w1imgJsons[i].date.split('-')[0]
             // w1imgJsons[i].date = w1imgJsons[i].date.split('-')[1] + '-' + w1imgJsons[i].date.split('-')[2]
