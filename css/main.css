@@ -18,7 +18,7 @@ body {
 }
 
 #head{
-  background-color:#333;
+  background-color:#2A3724;
   width: 100%;
   min-width: 1000px;
   position: relative;
@@ -32,7 +32,7 @@ body {
   width: 1000px;
   left: 0;
   right: 0;
-  background: #333333;
+  background: #2A3724;
 }
 
 #head-content{
@@ -238,7 +238,7 @@ line-height: 50px;
 #copyright{
 
   width: 100%;
-  background-color: #333333;
+  background-color: #2A3724;
 }
 
 #copyright p{

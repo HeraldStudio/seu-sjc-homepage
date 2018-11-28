@@ -5,3 +5,4 @@ template/dist/
 .cache/
 .DS_Store
 herald-template.zip
+*.icloud
